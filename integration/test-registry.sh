@@ -40,9 +40,9 @@ for i in $_IMAGELIST; do
 		# special case for no arch prefix on amd64 (x86_64 Linux) images  
 		target="amd64_${i}"
 	}
-	echo docker tag ${i}:latest ${_REGISTRY}/${target}:latest
-	docker tag ${i}:latest ${_REGISTRY}/${target}:latest
-	docker push ${_REGISTRY}/${target}:latest
+	echo docker tag ${i}:latest ${_REGISTRY}:${target}
+	docker tag ${i}:latest ${_REGISTRY}:${target}:
+	docker push ${_REGISTRY}:${target}
 done
 
 echo ">> 4: Attempt creating manifest list on registry ${_REGISTRY}"
