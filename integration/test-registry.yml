@@ -1,7 +1,7 @@
 image: __REGISTRY__/alpine:latest
 manifests: 
   - 
-    image: __REGISTRY__:ppc64le_alpine:
+    image: __REGISTRY__:ppc64le_alpine
     platform: 
       architecture: ppc64le
       os: linux

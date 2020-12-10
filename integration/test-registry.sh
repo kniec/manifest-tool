@@ -41,7 +41,7 @@ for i in $_IMAGELIST; do
 		target="amd64_${i}"
 	}
 	echo docker tag ${i}:latest ${_REGISTRY}:${target}
-	docker tag ${i}:latest ${_REGISTRY}:${target}:
+	docker tag ${i}:latest ${_REGISTRY}:${target}
 	docker push ${_REGISTRY}:${target}
 done
 
